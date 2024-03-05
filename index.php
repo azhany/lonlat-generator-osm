@@ -34,7 +34,7 @@ function searchLocation($locationName) {
 }
 
 // Read the JSON file
-$geonames = json_decode(file_get_contents('http://localhost/wementoor-quick/assets/json/states-cities.json'), true);
+$geonames = json_decode(file_get_contents("http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] . 'states-cities.json'), true);
 $new_geonames = [];
 
 // Loop through each region
